@@ -127,6 +127,9 @@ importers:
       lint-staged:
         specifier: 13.2.1
         version: 13.2.1
+      pg:
+        specifier: ^8.10.0
+        version: 8.10.0
       prettier:
         specifier: 2.8.7
         version: 2.8.7
@@ -270,6 +273,9 @@ importers:
       '@hive/server':
         specifier: workspace:*
         version: link:../packages/services/server
+      '@hive/storage':
+        specifier: workspace:*
+        version: link:../packages/services/storage
       '@types/dockerode':
         specifier: 3.3.16
         version: 3.3.16
@@ -1386,8 +1392,11 @@ importers:
 
   packages/web/app:
     dependencies:
+      '@graphiql/react':
+        specifier: '*'
+        version: 0.17.1(@types/react@18.0.35)(graphql@16.6.0)(react-dom@18.2.0)(react@18.2.0)
       '@graphiql/toolkit':
-        specifier: 0.8.3
+        specifier: '*'
         version: 0.8.3(graphql@16.6.0)
       '@graphql-tools/mock':
         specifier: 8.7.20
