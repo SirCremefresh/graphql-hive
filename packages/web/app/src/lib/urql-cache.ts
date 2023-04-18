@@ -412,7 +412,7 @@ const createOperation: TypedDocumentNodeUpdateResolver<typeof CreateOperationDoc
       {
         query: CollectionsDocument,
         variables: {
-          targetId: collectionsQuery.arguments.targetId,
+          targetId: collectionsQuery.arguments!.targetId as string,
         },
       },
       data => {

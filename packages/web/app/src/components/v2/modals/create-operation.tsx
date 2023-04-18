@@ -57,13 +57,14 @@ export function CreateOperationModal({
         collectionId: Yup.string().required('collection is a required field'),
       }),
       async onSubmit(values) {
+        const operation = data!.operation!;
         const { error } = operationId
           ? await mutateUpdate({
               input: {
                 ...values,
-                query: data.operation.query,
-                variables: data.operation.variables,
-                headers: data.operation.headers,
+                query: operation.query,
+                variables: operation.variables,
+                headers: operation.headers,
                 id: operationId,
               },
             })
